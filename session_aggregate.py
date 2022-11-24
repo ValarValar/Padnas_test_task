@@ -6,8 +6,8 @@ FILE_NAME = "test_data.csv"
 DATA_PATH = f"{os.getcwd()}\data\{FILE_NAME}"
 
 # Чтобы не создавать датафрейм с тестовыми даными, решил использовать готовый
-# для наглядности брал разницу в 2 дня, так как в тестовом датасете разницы в 3 минуты нет
-SESSION_TIME_DELTA = pd.Timedelta(days=2)
+# для наглядности брал разницу в 1 день, так как в тестовом датасете разницы в 3 минуты нет
+SESSION_TIME_DELTA = pd.Timedelta(days=1)
 
 data_df = pd.read_csv(DATA_PATH)
 data_df = data_df.sort_values(by=['customer_id', 'timestamp'])
